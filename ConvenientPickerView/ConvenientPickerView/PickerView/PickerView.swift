@@ -73,11 +73,11 @@ open class PickerView: UIView {
     }
 
     //MARK:- 只有一列的时候用到的属性
-    fileprivate var singleDoneOnClick:SingleCompleteAction? = nil {
+    fileprivate var singleCompleteOnClick:SingleCompleteAction? = nil {
         didSet {
             toolBar.completeAction =  {[unowned self] in
                 
-                self.singleDoneOnClick?(self.selectedIndex, self.selectedValue)
+                self.singleCompleteOnClick?(self.selectedIndex, self.selectedValue)
             }
         }
     }
@@ -116,11 +116,11 @@ open class PickerView: UIView {
     
     
     //MARK:- 有多列不关联的时候用到的属性
-    fileprivate var multipleDoneOnClick:MultipleCompleteAction? = nil {
+    fileprivate var multipleCompleteOnClick:MultipleCompleteAction? = nil {
         didSet {
             
             toolBar.completeAction =  {[unowned self] in
-                self.multipleDoneOnClick?(self.selectedIndexs, self.selectedValues)
+                self.multipleCompleteOnClick?(self.selectedIndexs, self.selectedValues)
             }
         }
     }
@@ -185,7 +185,7 @@ open class PickerView: UIView {
     
     
     
-    //MARK:- 有多列关联的时候用到的属性
+    //MARK: - 有多列关联的时候用到的属性
     fileprivate var multipleAssociatedColsData: MultipleAssociatedDataType? = nil {
         didSet {
             
@@ -538,7 +538,7 @@ extension PickerView {
         pic.singleColData = singleColData
         pic.defalultSelectedIndex = defaultIndex
         
-        pic.singleDoneOnClick = completeAction
+        pic.singleCompleteOnClick = completeAction
         pic.cancelAction = cancelAction
         return pic
         
@@ -557,7 +557,7 @@ extension PickerView {
         pic.multipleColsData = multipleColsData
         pic.defalultSelectedIndexs = defaultSelectedIndexs
         pic.cancelAction = cancelAction
-        pic.multipleDoneOnClick = completeAction
+        pic.multipleCompleteOnClick = completeAction
         return pic
         
     }
@@ -575,7 +575,7 @@ extension PickerView {
         pic.multipleAssociatedColsData = multipleAssociatedColsData
         pic.defaultSelectedValues = defaultSelectedValues
         pic.cancelAction = cancelAction
-        pic.multipleDoneOnClick = completeAction
+        pic.multipleCompleteOnClick = completeAction
         return pic
         
     }
