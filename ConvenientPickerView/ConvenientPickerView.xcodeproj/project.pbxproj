@@ -17,6 +17,8 @@
 		356F5AFD1E7F693500BCB6D0 /* Province.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356F5AFA1E7F693500BCB6D0 /* Province.plist */; };
 		356F5AFF1E7F69EB00BCB6D0 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5AFE1E7F69EB00BCB6D0 /* ToolBarView.swift */; };
 		356F5B011E7F877A00BCB6D0 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5B001E7F877A00BCB6D0 /* Picker.swift */; };
+		356F5B031E7FDB7C00BCB6D0 /* ConvenientPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5B021E7FDB7C00BCB6D0 /* ConvenientPickerView.swift */; };
+		356F5B051E7FDBEA00BCB6D0 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5B041E7FDBEA00BCB6D0 /* PickerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		356F5AFA1E7F693500BCB6D0 /* Province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Province.plist; sourceTree = "<group>"; };
 		356F5AFE1E7F69EB00BCB6D0 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
 		356F5B001E7F877A00BCB6D0 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
+		356F5B021E7FDB7C00BCB6D0 /* ConvenientPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenientPickerView.swift; sourceTree = "<group>"; };
+		356F5B041E7FDBEA00BCB6D0 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +87,8 @@
 				356F5AFA1E7F693500BCB6D0 /* Province.plist */,
 				356F5AFE1E7F69EB00BCB6D0 /* ToolBarView.swift */,
 				356F5B001E7F877A00BCB6D0 /* Picker.swift */,
+				356F5B021E7FDB7C00BCB6D0 /* ConvenientPickerView.swift */,
+				356F5B041E7FDBEA00BCB6D0 /* PickerView.swift */,
 			);
 			path = PickerView;
 			sourceTree = "<group>";
@@ -164,6 +170,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				356F5AFF1E7F69EB00BCB6D0 /* ToolBarView.swift in Sources */,
+				356F5B031E7FDB7C00BCB6D0 /* ConvenientPickerView.swift in Sources */,
+				356F5B051E7FDBEA00BCB6D0 /* PickerView.swift in Sources */,
 				356F5B011E7F877A00BCB6D0 /* Picker.swift in Sources */,
 				356F5AE81E7F689900BCB6D0 /* ViewController.swift in Sources */,
 				356F5AE61E7F689900BCB6D0 /* AppDelegate.swift in Sources */,
@@ -330,6 +338,7 @@
 				356F5AF61E7F689900BCB6D0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
