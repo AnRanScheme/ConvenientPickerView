@@ -16,6 +16,7 @@
 		356F5AFC1E7F693500BCB6D0 /* City.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356F5AF91E7F693500BCB6D0 /* City.plist */; };
 		356F5AFD1E7F693500BCB6D0 /* Province.plist in Resources */ = {isa = PBXBuildFile; fileRef = 356F5AFA1E7F693500BCB6D0 /* Province.plist */; };
 		356F5AFF1E7F69EB00BCB6D0 /* ToolBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5AFE1E7F69EB00BCB6D0 /* ToolBarView.swift */; };
+		356F5B011E7F877A00BCB6D0 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5B001E7F877A00BCB6D0 /* Picker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		356F5AF91E7F693500BCB6D0 /* City.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = City.plist; sourceTree = "<group>"; };
 		356F5AFA1E7F693500BCB6D0 /* Province.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Province.plist; sourceTree = "<group>"; };
 		356F5AFE1E7F69EB00BCB6D0 /* ToolBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolBarView.swift; sourceTree = "<group>"; };
+		356F5B001E7F877A00BCB6D0 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				356F5AF91E7F693500BCB6D0 /* City.plist */,
 				356F5AFA1E7F693500BCB6D0 /* Province.plist */,
 				356F5AFE1E7F69EB00BCB6D0 /* ToolBarView.swift */,
+				356F5B001E7F877A00BCB6D0 /* Picker.swift */,
 			);
 			path = PickerView;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				356F5AFF1E7F69EB00BCB6D0 /* ToolBarView.swift in Sources */,
+				356F5B011E7F877A00BCB6D0 /* Picker.swift in Sources */,
 				356F5AE81E7F689900BCB6D0 /* ViewController.swift in Sources */,
 				356F5AE61E7F689900BCB6D0 /* AppDelegate.swift in Sources */,
 			);
