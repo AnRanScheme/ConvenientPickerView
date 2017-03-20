@@ -80,30 +80,96 @@ class Picker: UIView {
     
     private var defaultSelectedIndex: Int? {
         didSet {
-
-}
+            if let defaultIndex = defaultSelectedIndex, let singleData = singleColData {
+                assert(defaultIndex >= 0 && defaultIndex < singleData.count, "设置的默认选中Index不合法")
+                if defaultIndex >= 0 && defaultIndex < singleData.count {
+                    // 设置默认值
+                    selectedIndex = defaultIndex
+                    selectedValue = singleData[defaultIndex]
+                    // 滚动到默认位置
+                    pickerView.selectRow(defaultIndex, inComponent: 0, animated: false)
+                }
+            } else {
+                // 没有默认值设置0行为默认值
+                selectedIndex = 0
+                selectedValue = singleColData![0]
+                pickerView.selectRow(0, inComponent: 0, animated: false)
+            }
+        }
     }
-    
-    
-    
-    
+
     private var singleColData: [String]?
     
     private var selectedIndex: Int = 0
     private var selectedValue: String = ""
     
+    // MARK: - 多列不关联的时候用到的属性
+    var multipleCompleteOnClick: MultipleCompleteAction? {
+        didSet {
+            tool.completeAction = {[unowned self] in
+                self.multipleCompleteOnClick?(self.selectedIndexs, self.selectedValues)
+            }
+        }
+    }
+    
+    private var multipleColsData: [[String]]? {
+        didSet {
+            if let multipleData = multipleColsData {
+                for _ in multipleData.indices {
+                    selectedIndexs.append(0)
+                    selectedValues.append(" ")
+                }
+            }
+        }
+    }
+    
+    private var defalultSelectedIndexs: [Int]? {
+        didSet {
+            if let defaultIndexs = defalultSelectedIndexs {
+                defaultIndexs.enumerated().forEach({ (component, row) in
+                    assert(component < pickerView.numberOfComponents && row < pickerView.numberOfRows(inComponent: component), "设置的默认选中Indexs有不合法的")
+                    if component < pickerView.numberOfComponents && row < pickerView.numberOfRows(inComponent: component) {
+                        // 滚动到默认位置
+                        pickerView.selectRow(row, inComponent: component, animated: false)
+                        // 设置默认值
+                        selectedIndexs[component] = row
+                        selectedValues[component] = self.pickerView(pickerView, titleForRow: row, forComponent: component) ?? " "
+                    }
+                })
+            } else {
+                multipleColsData?.indices.forEach({ (index) in
+                    // 滚动到默认位置
+                    pickerView.selectRow(0, inComponent: index, animated: false)
+                    // 设置默认选中值
+                    selectedIndexs[index] = 0
+                    selectedValues[index] = self.pickerView(pickerView, titleForRow: 0, forComponent: index) ?? " "
+                })
+            }
+        }
+    }
+    
+    
+    private var selectedIndexs: [Int] = []
+    private var selectedValues: [String] = []
     
     
     
     
     
+    private lazy var pickerView: UIPickerView = { [unowned self] in
+        let picker = UIPickerView()
+        picker.delegate = self
+        picker.dataSource = self
+        picker.backgroundColor = UIColor.white
+        return picker
+    }()
     
+    private lazy var tool: ToolBarView = ToolBarView()
     
+    private let pickerViewHeight: CGFloat = 216.0
+    private let toolBarHeight: CGFloat = 44.0
     
-    
-    
-    
-    
+    let screenW = UIScreen.main.bounds.size.width
     
     
     override init(frame: CGRect) {
@@ -114,14 +180,30 @@ class Picker: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
-    
-    
-    
-    
-
-
-    
-    
-    private lazy var tool: ToolBarView = ToolBarView()
 }
+
+
+extension Picker: UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 0
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 0
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return ""
+    }
+    
+}
+
+
+
+
+
