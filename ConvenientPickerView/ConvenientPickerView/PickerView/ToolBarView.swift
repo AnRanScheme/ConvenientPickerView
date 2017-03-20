@@ -5,7 +5,7 @@
 //  Created by 安然 on 17/3/20.
 //  Copyright © 2017年 安然. All rights reserved.
 // github: https://github.com/AnRanScheme/ConvenientPickerView.git
-// 简书: http://www.jianshu.com/users/fb31a3d1ec30/latest_articles
+// 简书: 
 
 import UIKit
 
