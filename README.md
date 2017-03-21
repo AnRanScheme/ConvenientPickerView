@@ -15,3 +15,12 @@
         self.selectedDataLabel.text = selectedValue
         }
         view.addSubview(test)
+
+2. 按钮(点击事件)中的使用, 只需要在相应的点击事件中使用UsefulPickerView的class方法即可, 这些方法和TextField的参数和使用完全相同, 多的一个效果就是点击背景会移除选择器
+
+        ConvenientPickerView.showSingleColPicker("单列数据",
+                                                 data: singleData,
+                                                 defaultSelectedIndex: 2) { [unowned self]
+                                                    (selectIndex, selectValue) in
+                                                    self.selectedLabel.text = "选中了第\(selectIndex)行----选中的数据为\(selectValue)"
+        }
