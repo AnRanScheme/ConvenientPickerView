@@ -15,6 +15,9 @@
         self.selectedDataLabel.text = selectedValue
         }
         view.addSubview(test)
+        
+ TextField的    例子 
+![这是列子](https://github.com/AnRanScheme/ConvenientPickerView/raw/master/ConvenientPickerView/anran2.gif)
 
 2. 按钮(点击事件)中的使用, 只需要在相应的点击事件中使用UsefulPickerView的class方法即可, 这些方法和TextField的参数和使用完全相同, 多的一个效果就是点击背景会移除选择器
 
@@ -24,6 +27,10 @@
                                                     (selectIndex, selectValue) in
                                                     self.selectedLabel.text = "选中了第\(selectIndex)行----选中的数据为\(selectValue)"
         }
+        
+ Buttond的    例子 
+![这是列子](https://github.com/AnRanScheme/ConvenientPickerView/raw/master/ConvenientPickerView/anran1.gif)
+        
 
 
 3. UsefulPickerView. 处理弹出和移除view
@@ -53,4 +60,6 @@
             }
             
             
-            
+4. 如果你觉得还不错那就不要吝啬你的星星,当然本文章应用了大量大神的思路,好吧我就是练练
+            
+
