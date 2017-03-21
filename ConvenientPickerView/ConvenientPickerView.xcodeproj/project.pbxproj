@@ -19,6 +19,8 @@
 		356F5B011E7F877A00BCB6D0 /* Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5B001E7F877A00BCB6D0 /* Picker.swift */; };
 		356F5B031E7FDB7C00BCB6D0 /* ConvenientPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5B021E7FDB7C00BCB6D0 /* ConvenientPickerView.swift */; };
 		356F5B051E7FDBEA00BCB6D0 /* PickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5B041E7FDBEA00BCB6D0 /* PickerView.swift */; };
+		359A6E0D1E80B4D600F12009 /* ARAButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A6E0C1E80B4D600F12009 /* ARAButtonViewController.swift */; };
+		359A6E0F1E80B4EF00F12009 /* ARATextFieldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 359A6E0E1E80B4EF00F12009 /* ARATextFieldViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		356F5B001E7F877A00BCB6D0 /* Picker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Picker.swift; sourceTree = "<group>"; };
 		356F5B021E7FDB7C00BCB6D0 /* ConvenientPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConvenientPickerView.swift; sourceTree = "<group>"; };
 		356F5B041E7FDBEA00BCB6D0 /* PickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerView.swift; sourceTree = "<group>"; };
+		359A6E0C1E80B4D600F12009 /* ARAButtonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAButtonViewController.swift; sourceTree = "<group>"; };
+		359A6E0E1E80B4EF00F12009 /* ARATextFieldViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARATextFieldViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +79,8 @@
 				356F5AEC1E7F689900BCB6D0 /* Assets.xcassets */,
 				356F5AEE1E7F689900BCB6D0 /* LaunchScreen.storyboard */,
 				356F5AF11E7F689900BCB6D0 /* Info.plist */,
+				359A6E0C1E80B4D600F12009 /* ARAButtonViewController.swift */,
+				359A6E0E1E80B4EF00F12009 /* ARATextFieldViewController.swift */,
 			);
 			path = ConvenientPickerView;
 			sourceTree = "<group>";
@@ -171,9 +177,11 @@
 			files = (
 				356F5AFF1E7F69EB00BCB6D0 /* ToolBarView.swift in Sources */,
 				356F5B031E7FDB7C00BCB6D0 /* ConvenientPickerView.swift in Sources */,
+				359A6E0D1E80B4D600F12009 /* ARAButtonViewController.swift in Sources */,
 				356F5B051E7FDBEA00BCB6D0 /* PickerView.swift in Sources */,
 				356F5B011E7F877A00BCB6D0 /* Picker.swift in Sources */,
 				356F5AE81E7F689900BCB6D0 /* ViewController.swift in Sources */,
+				359A6E0F1E80B4EF00F12009 /* ARATextFieldViewController.swift in Sources */,
 				356F5AE61E7F689900BCB6D0 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

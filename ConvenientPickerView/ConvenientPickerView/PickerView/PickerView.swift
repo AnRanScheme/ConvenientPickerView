@@ -297,14 +297,14 @@ open class PickerView: UIView {
     fileprivate lazy var datePicker: UIDatePicker = {[unowned self] in
         let datePic = UIDatePicker()
         datePic.backgroundColor = UIColor.white
-        //        print(NSLocale.availableLocaleIdentifiers())
+        // print(NSLocale.availableLocaleIdentifiers())
         datePic.locale = Locale(identifier: "zh_CN")
         return datePic
     }()
     
     fileprivate lazy var toolBar: ToolBarView! = ToolBarView()
     
-    //MARK:- 初始化
+    // MARK: - 初始化
     public init(pickerStyle: PickerStyles) {
         let frame = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: toolBarHeight + pickerViewHeight)
         self.pickerStyle = pickerStyle
@@ -339,6 +339,7 @@ open class PickerView: UIView {
             addSubview(pickerView)
         }
     }
+    
     func dateDidChange(_ datePic: UIDatePicker) {
         selectedDate = datePic.date
     }
@@ -584,9 +585,9 @@ extension PickerView {
     
     public class func citiesPicker(_ toolBarTitle: String,
                                    defaultSelectedValues: [String]?,
+                                   selectTopLevel:Bool = false,
                                    cancelAction: ButtonAction?,
-                                   completeAction: MultipleCompleteAction?,
-                                   selectTopLevel:Bool = false) -> PickerView {
+                                   completeAction: MultipleCompleteAction?) -> PickerView {
         
         let provincePath = Bundle.main.path(forResource: "Province", ofType: "plist")
         let cityPath = Bundle.main.path(forResource: "City", ofType: "plist")

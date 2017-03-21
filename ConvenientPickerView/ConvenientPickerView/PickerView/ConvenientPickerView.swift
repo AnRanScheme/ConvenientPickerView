@@ -17,7 +17,7 @@ open class ConvenientPickerView: UIView {
     
     public typealias MultipleAssociatedDataType = [[[String: [String]?]]]
     
-    fileprivate var pickerView: PickerView!
+    fileprivate var pickerView: PickerView! = PickerView()
     //MARK:- 常量
     fileprivate let pickerViewHeight:CGFloat = 260.0
     
@@ -33,13 +33,11 @@ open class ConvenientPickerView: UIView {
     ///  使用NSArray 可以存任何"东西", 如果使用 [Any], 那么当
     /// let a = ["1", "2"] var b:[Any] = a 会报错
     
-    // MARK:- 初始化
+    // MARK: - 初始化
     // 单列
     convenience init(frame: CGRect, toolBarTitle: String, singleColData: [String], defaultSelectedIndex: Int?, completeAction: SingleCompleteAction?) {
         
         self.init(frame: frame)
-        
-        
         
         pickerView = PickerView.singleColPicker(toolBarTitle, singleColData: singleColData, defaultIndex: defaultSelectedIndex, cancelAction: {[unowned self] in
             // 点击取消的时候移除
@@ -102,18 +100,21 @@ open class ConvenientPickerView: UIView {
         
     }
     // 城市选择器
-    convenience init(frame: CGRect, toolBarTitle: String, defaultSelectedValues: [String]?, completeAction: MultipleCompleteAction?, selectTopLevel: Bool = false) {
+    convenience init(frame: CGRect, toolBarTitle: String, defaultSelectedValues: [String]?, selectTopLevel: Bool = false, completeAction: MultipleCompleteAction?) {
         
         self.init(frame: frame)
         
-        pickerView = PickerView.citiesPicker(toolBarTitle, defaultSelectedValues: defaultSelectedValues,  cancelAction: {[unowned self] in
+        pickerView = PickerView.citiesPicker(toolBarTitle,
+                                             defaultSelectedValues: defaultSelectedValues,
+                                             selectTopLevel: selectTopLevel,
+                                             cancelAction: {[unowned self] in
             // 点击取消的时候移除
             self.hidePicker()
             
             }, completeAction: {[unowned self] (selectedIndexs, selectedValues) in
                 completeAction?(selectedIndexs, selectedValues)
                 self.hidePicker()
-            }, selectTopLevel: selectTopLevel)
+        })
         
         pickerView.frame = hideFrame
         addSubview(pickerView)
@@ -230,7 +231,7 @@ extension ConvenientPickerView {
     ///  - parameter title:                      标题
     ///  - parameter data:                       数据
     ///  - parameter defaultSeletedIndex:        默认选中的行数
-    ///  - parameter CompleteAction:                 响应完成的Closure
+    ///  - parameter CompleteAction:             响应完成的Closure
     ///
     ///  - returns:
     public class func showSingleColPicker(_ toolBarTitle: String, data: [String], defaultSelectedIndex: Int?,  completeAction: SingleCompleteAction?) {
@@ -248,7 +249,7 @@ extension ConvenientPickerView {
     ///  - parameter title:                      标题
     ///  - parameter data:                       数据
     ///  - parameter defaultSeletedIndexs:       默认选中的每一列的行数
-    ///  - parameter CompleteAction:                 响应完成的Closure
+    ///  - parameter CompleteAction:             响应完成的Closure
     ///
     ///  - returns:
     public class func showMultipleColsPicker(_ toolBarTitle: String, data: [[String]], defaultSelectedIndexs: [Int]?,completeAction: MultipleCompleteAction?) {
@@ -266,7 +267,7 @@ extension ConvenientPickerView {
     ///  - parameter title:                      标题
     ///  - parameter data:                       数据, 数据的格式参照示例
     ///  - parameter defaultSeletedIndexs:       默认选中的每一列的行数
-    ///  - parameter CompleteAction:                 响应完成的Closure
+    ///  - parameter CompleteAction:             响应完成的Closure
     ///
     ///  - returns:
     public class func showMultipleAssociatedColsPicker(_ toolBarTitle: String, data: MultipleAssociatedDataType, defaultSelectedValues: [String]?, completeAction: MultipleCompleteAction?) {
@@ -284,7 +285,7 @@ extension ConvenientPickerView {
     ///
     ///  - parameter title:                      标题
     ///  - parameter defaultSeletedValues:       默认选中的每一列的值, 注意不是行数
-    ///  - parameter CompleteAction:                 响应完成的Closure
+    ///  - parameter CompleteAction:             响应完成的Closure
     ///
     ///  - returns:
     public class func showCitiesPicker(_ toolBarTitle: String, defaultSelectedValues: [String]?, selectTopLevel: Bool=false, completeAction: MultipleCompleteAction?) {
@@ -292,7 +293,11 @@ extension ConvenientPickerView {
         let window = UIApplication.shared.keyWindow
         guard let currentWindow = window else { return }
         
-        let testView = ConvenientPickerView(frame: currentWindow.bounds, toolBarTitle: toolBarTitle, defaultSelectedValues: defaultSelectedValues, completeAction: completeAction, selectTopLevel: selectTopLevel)
+        let testView = ConvenientPickerView(frame: currentWindow.bounds,
+                                            toolBarTitle: toolBarTitle,
+                                            defaultSelectedValues: defaultSelectedValues,
+                                            selectTopLevel: selectTopLevel,
+                                            completeAction: completeAction)
         
         testView.showPicker()
         
@@ -302,7 +307,7 @@ extension ConvenientPickerView {
     ///
     ///  - parameter title:                      标题
     ///  - parameter datePickerSetting:          可配置UIDatePicker的样式
-    ///  - parameter CompleteAction:                 响应完成的Closure
+    ///  - parameter CompleteAction:             响应完成的Closure
     ///
     ///  - returns:
     public class func showDatePicker(_ toolBarTitle: String, datePickerSetting: DatePickerSetting = DatePickerSetting(), completeAction: DateCompleteAction?) {

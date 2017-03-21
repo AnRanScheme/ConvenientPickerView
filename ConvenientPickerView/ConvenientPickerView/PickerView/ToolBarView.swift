@@ -29,7 +29,7 @@ class ToolBarView: UIView {
     private lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
-        label.textColor     = UIColor.white
+        label.textColor     = UIColor.black
         return label
     }()
     
@@ -71,10 +71,10 @@ class ToolBarView: UIView {
         contentView.addSubview(completeButton)
         contentView.addSubview(cancelButton)
         contentView.addSubview(titleLabel)
-        cancelButton.addTarget(self,
+        completeButton.addTarget(self,
                                action: #selector(completeButtonOnClick(sender:)),
                                for: .touchUpInside)
-        completeButton.addTarget(self,
+        cancelButton.addTarget(self,
                                  action: #selector(cancelButtonOnClick(sender:)),
                                  for: .touchUpInside)
     }
