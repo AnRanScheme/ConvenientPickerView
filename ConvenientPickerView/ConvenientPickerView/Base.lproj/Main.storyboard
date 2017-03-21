@@ -124,7 +124,7 @@
                                 <rect key="frame" x="0.0" y="316" width="375" height="44"/>
                                 <state key="normal" title="城市"/>
                                 <connections>
-                                    <action selector="multipleAssociatedBtnOnClick:" destination="nDX-l5-c5t" eventType="touchUpInside" id="Gx2-Eb-Kat"/>
+                                    <action selector="citiesBtnOnClick:" destination="nDX-l5-c5t" eventType="touchUpInside" id="Gbq-I8-Qv5"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -174,9 +174,103 @@
                     <view key="view" contentMode="scaleToFill" id="pha-MW-odP">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="单列数据选择" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Pj5-f4-HQ9" customClass="PickerTextField" customModule="ConvenientPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="126" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="tDs-da-cdg"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="多列不关联数据选择" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-nk-b3A" customClass="PickerTextField" customModule="ConvenientPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="170" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="kyJ-Gc-3w8"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="多列关联数据选择" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mGw-vx-BIu" customClass="PickerTextField" customModule="ConvenientPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="214" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="cE4-y2-NBm"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="日期选择" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jdp-2F-1cF" customClass="PickerTextField" customModule="ConvenientPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="302" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="dtK-jL-Z23"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="时间选择" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xP9-Jv-Ljp" customClass="PickerTextField" customModule="ConvenientPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="346" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Mr4-Ui-HTk"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FcA-oB-h0r">
+                                <rect key="frame" x="0.0" y="486" width="375" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.027450980392156862" green="0.56470588235294117" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="省市区选择" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5A0-aa-eMg" customClass="PickerTextField" customModule="ConvenientPickerView" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="258" width="375" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="pml-Bd-vZh"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jdp-2F-1cF" firstAttribute="top" secondItem="5A0-aa-eMg" secondAttribute="bottom" id="3vX-kx-Fvj"/>
+                            <constraint firstItem="xP9-Jv-Ljp" firstAttribute="leading" secondItem="Jdp-2F-1cF" secondAttribute="leading" id="90X-me-GXl"/>
+                            <constraint firstItem="3RK-nk-b3A" firstAttribute="top" secondItem="Pj5-f4-HQ9" secondAttribute="bottom" id="D4C-Cr-vP7"/>
+                            <constraint firstItem="3RK-nk-b3A" firstAttribute="trailing" secondItem="Pj5-f4-HQ9" secondAttribute="trailing" id="OJS-Vb-rbJ"/>
+                            <constraint firstItem="Pj5-f4-HQ9" firstAttribute="leading" secondItem="pha-MW-odP" secondAttribute="leading" id="RMV-O7-2tL"/>
+                            <constraint firstItem="5A0-aa-eMg" firstAttribute="top" secondItem="mGw-vx-BIu" secondAttribute="bottom" id="Rai-Uf-8wy"/>
+                            <constraint firstItem="3RK-nk-b3A" firstAttribute="leading" secondItem="Pj5-f4-HQ9" secondAttribute="leading" id="S5l-tv-iRf"/>
+                            <constraint firstItem="5A0-aa-eMg" firstAttribute="trailing" secondItem="mGw-vx-BIu" secondAttribute="trailing" id="U5t-Rt-ThM"/>
+                            <constraint firstItem="mGw-vx-BIu" firstAttribute="trailing" secondItem="3RK-nk-b3A" secondAttribute="trailing" id="Xgr-w6-Uo5"/>
+                            <constraint firstItem="mGw-vx-BIu" firstAttribute="top" secondItem="3RK-nk-b3A" secondAttribute="bottom" id="aaY-Wp-uFJ"/>
+                            <constraint firstItem="xP9-Jv-Ljp" firstAttribute="top" secondItem="Jdp-2F-1cF" secondAttribute="bottom" id="bg4-j5-hQO"/>
+                            <constraint firstItem="mGw-vx-BIu" firstAttribute="leading" secondItem="3RK-nk-b3A" secondAttribute="leading" id="d3n-ar-ejL"/>
+                            <constraint firstItem="xP9-Jv-Ljp" firstAttribute="trailing" secondItem="Jdp-2F-1cF" secondAttribute="trailing" id="fNA-IO-YJ5"/>
+                            <constraint firstItem="5A0-aa-eMg" firstAttribute="leading" secondItem="mGw-vx-BIu" secondAttribute="leading" id="l0C-ZY-xtJ"/>
+                            <constraint firstItem="Jdp-2F-1cF" firstAttribute="leading" secondItem="5A0-aa-eMg" secondAttribute="leading" id="lOb-BL-r2B"/>
+                            <constraint firstAttribute="trailing" secondItem="Pj5-f4-HQ9" secondAttribute="trailing" id="pFF-hj-JWC"/>
+                            <constraint firstItem="FcA-oB-h0r" firstAttribute="top" secondItem="xP9-Jv-Ljp" secondAttribute="bottom" constant="96" id="peK-P4-ZeF"/>
+                            <constraint firstItem="FcA-oB-h0r" firstAttribute="trailing" secondItem="xP9-Jv-Ljp" secondAttribute="trailing" id="vzv-J1-HGf"/>
+                            <constraint firstItem="Jdp-2F-1cF" firstAttribute="trailing" secondItem="5A0-aa-eMg" secondAttribute="trailing" id="wZ1-wK-Tbp"/>
+                            <constraint firstItem="Pj5-f4-HQ9" firstAttribute="top" secondItem="84J-EL-CiD" secondAttribute="bottom" constant="62" id="whL-Jg-9Ft"/>
+                            <constraint firstItem="FcA-oB-h0r" firstAttribute="leading" secondItem="xP9-Jv-Ljp" secondAttribute="leading" id="wze-8D-nNk"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="3hS-qm-GRC"/>
+                    <connections>
+                        <outlet property="citiesTextField" destination="5A0-aa-eMg" id="kGv-Qy-OJ1"/>
+                        <outlet property="dateTextField" destination="Jdp-2F-1cF" id="OnQ-me-buP"/>
+                        <outlet property="multipleAssociatedTextField" destination="mGw-vx-BIu" id="RRR-p5-PhA"/>
+                        <outlet property="multipleTextField" destination="3RK-nk-b3A" id="Vf0-OC-tIn"/>
+                        <outlet property="selectedDataLabel" destination="FcA-oB-h0r" id="JbO-iJ-SNC"/>
+                        <outlet property="singleTextField" destination="Pj5-f4-HQ9" id="i0N-Y1-DSt"/>
+                        <outlet property="timeTextField" destination="xP9-Jv-Ljp" id="hDs-8A-o9u"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bsr-kQ-lI7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

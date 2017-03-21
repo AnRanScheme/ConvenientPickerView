@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		35102DBF1E80D09C003337E9 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35102DBE1E80D09C003337E9 /* PickerTextField.swift */; };
+		35102DC11E80D849003337E9 /* anran.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35102DC01E80D849003337E9 /* anran.gif */; };
 		356F5AE61E7F689900BCB6D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5AE51E7F689900BCB6D0 /* AppDelegate.swift */; };
 		356F5AE81E7F689900BCB6D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5AE71E7F689900BCB6D0 /* ViewController.swift */; };
 		356F5AEB1E7F689900BCB6D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356F5AE91E7F689900BCB6D0 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		35102DBE1E80D09C003337E9 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
+		35102DC01E80D849003337E9 /* anran.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anran.gif; sourceTree = "<group>"; };
 		356F5AE21E7F689900BCB6D0 /* ConvenientPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvenientPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		356F5AE51E7F689900BCB6D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		356F5AE71E7F689900BCB6D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -79,6 +83,7 @@
 				356F5AEC1E7F689900BCB6D0 /* Assets.xcassets */,
 				356F5AEE1E7F689900BCB6D0 /* LaunchScreen.storyboard */,
 				356F5AF11E7F689900BCB6D0 /* Info.plist */,
+				35102DC01E80D849003337E9 /* anran.gif */,
 				359A6E0C1E80B4D600F12009 /* ARAButtonViewController.swift */,
 				359A6E0E1E80B4EF00F12009 /* ARATextFieldViewController.swift */,
 			);
@@ -95,6 +100,7 @@
 				356F5B001E7F877A00BCB6D0 /* Picker.swift */,
 				356F5B021E7FDB7C00BCB6D0 /* ConvenientPickerView.swift */,
 				356F5B041E7FDBEA00BCB6D0 /* PickerView.swift */,
+				35102DBE1E80D09C003337E9 /* PickerTextField.swift */,
 			);
 			path = PickerView;
 			sourceTree = "<group>";
@@ -165,6 +171,7 @@
 				356F5AFB1E7F693500BCB6D0 /* Area.plist in Resources */,
 				356F5AED1E7F689900BCB6D0 /* Assets.xcassets in Resources */,
 				356F5AEB1E7F689900BCB6D0 /* Main.storyboard in Resources */,
+				35102DC11E80D849003337E9 /* anran.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,6 +190,7 @@
 				356F5AE81E7F689900BCB6D0 /* ViewController.swift in Sources */,
 				359A6E0F1E80B4EF00F12009 /* ARATextFieldViewController.swift in Sources */,
 				356F5AE61E7F689900BCB6D0 /* AppDelegate.swift in Sources */,
+				35102DBF1E80D09C003337E9 /* PickerTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
