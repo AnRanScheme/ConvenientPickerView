@@ -36,16 +36,21 @@
 3. UsefulPickerView. 处理弹出和移除view
 
 
-        func hidePicker() {
-                // 把self从window中移除
-                UIView.animate(withDuration: 0.25, animations: { [unowned self] in
-                    self.backgroundColor = UIColor.clear
-                    self.pickerView.frame = self.hideFrame
-            
-                    }, completion: {[unowned self] (_) in
-                        self.removeFromSuperview()
-                })
-            }
+        fileprivate func showPicker() {
+               // 通过window 弹出view
+               let window = UIApplication.shared.keyWindow
+               guard let currentWindow = window else { return }
+               currentWindow.addSubview(self)
+               
+               currentWindow.addConstraints([pickerX, pickerY, pickerW, pickerH])
+        
+               UIView.animate(withDuration: 0.25, animations: {[unowned self] in
+                   self.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.1)
+                   self.pickerView.frame = self.showFrame
+                   }, completion: nil)
+        
+        
+       }
 
 
         func hidePicker() {
@@ -57,7 +62,7 @@
                     }, completion: {[unowned self] (_) in
                         self.removeFromSuperview()
                 })
-            }
+        }
             
             
 4. 如果你觉得还不错那就不要吝啬你的星星,当然本文章应用了大量大神的思路,好吧我就是练练
