@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		35102DBF1E80D09C003337E9 /* PickerTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35102DBE1E80D09C003337E9 /* PickerTextField.swift */; };
 		35102DC11E80D849003337E9 /* anran.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35102DC01E80D849003337E9 /* anran.gif */; };
+		35102DC41E80E1BA003337E9 /* anran2.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35102DC21E80E1BA003337E9 /* anran2.gif */; };
+		35102DC51E80E1BA003337E9 /* anran1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 35102DC31E80E1BA003337E9 /* anran1.gif */; };
 		356F5AE61E7F689900BCB6D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5AE51E7F689900BCB6D0 /* AppDelegate.swift */; };
 		356F5AE81E7F689900BCB6D0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356F5AE71E7F689900BCB6D0 /* ViewController.swift */; };
 		356F5AEB1E7F689900BCB6D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 356F5AE91E7F689900BCB6D0 /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* Begin PBXFileReference section */
 		35102DBE1E80D09C003337E9 /* PickerTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PickerTextField.swift; sourceTree = "<group>"; };
 		35102DC01E80D849003337E9 /* anran.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anran.gif; sourceTree = "<group>"; };
+		35102DC21E80E1BA003337E9 /* anran2.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anran2.gif; sourceTree = "<group>"; };
+		35102DC31E80E1BA003337E9 /* anran1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = anran1.gif; sourceTree = "<group>"; };
 		356F5AE21E7F689900BCB6D0 /* ConvenientPickerView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ConvenientPickerView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		356F5AE51E7F689900BCB6D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		356F5AE71E7F689900BCB6D0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +88,8 @@
 				356F5AEE1E7F689900BCB6D0 /* LaunchScreen.storyboard */,
 				356F5AF11E7F689900BCB6D0 /* Info.plist */,
 				35102DC01E80D849003337E9 /* anran.gif */,
+				35102DC21E80E1BA003337E9 /* anran2.gif */,
+				35102DC31E80E1BA003337E9 /* anran1.gif */,
 				359A6E0C1E80B4D600F12009 /* ARAButtonViewController.swift */,
 				359A6E0E1E80B4EF00F12009 /* ARATextFieldViewController.swift */,
 			);
@@ -165,6 +171,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35102DC51E80E1BA003337E9 /* anran1.gif in Resources */,
+				35102DC41E80E1BA003337E9 /* anran2.gif in Resources */,
 				356F5AF01E7F689900BCB6D0 /* LaunchScreen.storyboard in Resources */,
 				356F5AFC1E7F693500BCB6D0 /* City.plist in Resources */,
 				356F5AFD1E7F693500BCB6D0 /* Province.plist in Resources */,
