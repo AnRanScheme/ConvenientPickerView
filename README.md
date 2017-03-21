@@ -24,3 +24,33 @@
                                                     (selectIndex, selectValue) in
                                                     self.selectedLabel.text = "选中了第\(selectIndex)行----选中的数据为\(selectValue)"
         }
+
+
+3. UsefulPickerView. 处理弹出和移除view
+
+
+        func hidePicker() {
+                // 把self从window中移除
+                UIView.animate(withDuration: 0.25, animations: { [unowned self] in
+                    self.backgroundColor = UIColor.clear
+                    self.pickerView.frame = self.hideFrame
+            
+                    }, completion: {[unowned self] (_) in
+                        self.removeFromSuperview()
+                })
+            }
+
+
+        func hidePicker() {
+                // 把self从window中移除
+                UIView.animate(withDuration: 0.25, animations: { [unowned self] in
+                    self.backgroundColor = UIColor.clear
+                    self.pickerView.frame = self.hideFrame
+            
+                    }, completion: {[unowned self] (_) in
+                        self.removeFromSuperview()
+                })
+            }
+            
+            
+            
