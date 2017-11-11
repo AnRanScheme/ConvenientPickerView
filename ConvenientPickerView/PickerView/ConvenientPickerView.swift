@@ -173,10 +173,10 @@ extension ConvenientPickerView {
         
     }
     // 屏幕旋转时移除pickerView
-    func statusBarOrientationChange() {
+    @objc func statusBarOrientationChange() {
         removeFromSuperview()
     }
-    func tapAction(_ tap: UITapGestureRecognizer) {
+    @objc func tapAction(_ tap: UITapGestureRecognizer) {
         let location = tap.location(in: self)
         // 点击空白背景移除self
         if location.y <= screenHeight - pickerViewHeight {

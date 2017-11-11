@@ -29,7 +29,7 @@ class ViewController: UIViewController {
         let str = "如果你喜欢这个控件希望你给个星星还有,本控件大量的参考了 jasnig 大神的demo,哈哈哈我就是不要脸"
         let range = (str as NSString).range(of: "本控件大量的参考了 jasnig 大神的demo")
         let attributeString = NSMutableAttributedString(string:str)
-        attributeString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red,range: range)
+        attributeString.addAttribute(NSAttributedStringKey.foregroundColor, value: UIColor.red,range: range)
         contentLabel.attributedText = attributeString
     
     }

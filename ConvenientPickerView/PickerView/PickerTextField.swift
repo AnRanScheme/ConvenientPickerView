@@ -54,13 +54,13 @@ extension PickerTextField {
                                                object: self)
     }
     // 开始编辑添加pickerView
-    func didBeginEdit()  {
+    @objc func didBeginEdit()  {
         let pickerView = setUpPickerClosure?()
         pickerView?.delegate = self
         inputView = pickerView
     }
     // 编辑完成销毁pickerView
-    func didEndEdit() {
+    @objc func didEndEdit() {
         inputView = nil
     }
     

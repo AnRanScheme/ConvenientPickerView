@@ -79,11 +79,11 @@ class ToolBarView: UIView {
                                  for: .touchUpInside)
     }
     
-    func completeButtonOnClick(sender: UIButton) {
+    @objc func completeButtonOnClick(sender: UIButton) {
         completeAction?()
     }
     
-    func cancelButtonOnClick(sender: UIButton) {
+    @objc func cancelButtonOnClick(sender: UIButton) {
         cancelAction?()
     }
     
